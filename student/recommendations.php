@@ -55,8 +55,7 @@ if ($_SESSION['RollNo']) {
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="index.php"><i class="menu-icon icon-home"></i>Home
                                 </a></li>
-                                 <li><a href="message.php"><i class="menu-icon icon-inbox"></i>Messages</a>
-                                </li>
+                                 
                                 <li><a href="book.php"><i class="menu-icon icon-book"></i>All Books </a></li>
                                 <li><a href="history.php"><i class="menu-icon icon-tasks"></i>Previously Borrowed Books </a></li>
                                 <li><a href="recommendations.php"><i class="menu-icon icon-list"></i>Recommend Books </a></li>
@@ -116,11 +115,7 @@ if ($_SESSION['RollNo']) {
             </div>
             <!--/.container-->
         </div>
-<div class="footer">
-            <div class="container">
-                <b class="copyright">&copy; 2018 Library Management System </b>All rights reserved.
-            </div>
-        </div>
+
         
         <!--/.wrapper-->
         <script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
