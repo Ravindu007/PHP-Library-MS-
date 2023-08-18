@@ -40,54 +40,29 @@ if ($_SESSION['RollNo']) {
 
 
           <!-- Content part of the Student -->
-          <div class="col-sm-12 col-md-8 content h-screen overflow-y-scroll">
-            <h1 class="flex w-full justify-start text-3xl py-2">Manage Students</h1>
-            <table class="w-full border-2 border-black">
-            <?php
-                if (isset($_POST['submit'])) {
-                    $s = $_POST['title'];
-                    $sql = "select * from LMS.user where (RollNo='$s' or Name like '%$s%') and RollNo<>'ADMIN'";
-                } else
-                    $sql = "select * from LMS.user where RollNo<>'ADMIN'";
-                    $result = $conn->query($sql);
-                    $rowcount = mysqli_num_rows($result);
+          <div class="col-sm-12 col-md-8 content h-screen overflow-y-scroll flex justify-center items-center">
+            <button class="bg-yellow-500 rounded-md px-4 py-2 mr-5 hover:bg-black hover:text-white">
+              <a href="student1.php">Back</a>
+            </button>
+            <div class="profile w-[50%] h-fit px-4 py-4 border-1 border-yellow-300 shadow-md shadow-yellow-500">
+                <?php
+                $rno=$_GET['id'];
+                $sql="select * from LMS.user where RollNo='$rno'";
+                $result=$conn->query($sql);
+                $row=$result->fetch_assoc();    
+                                
+                      $name=$row['Name'];
+                      $category=$row['Category'];
+                      $email=$row['EmailId'];
+                      $mobno=$row['MobNo'];
 
-                if (!($rowcount))
-                    echo "<br><center><h2><b><i>No Results</i></b></h2></center>";
-                else {
-            ?>
-                <table class="table" id = "tables">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email id</th>                                      
-                            <th>Roll No.</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                      //$result=$conn->query($sql);
-                      while ($row = $result->fetch_assoc()) {
-
-                      	  $email = $row['EmailId'];
-                          $name = $row['Name'];
-                          $rollno = $row['RollNo'];
-                                                                                                                                                        ?>
-                        <tr>
-                            <td><?php echo $name ?></td>
-                            <td><?php echo $email ?></td>                                      
-                            <td><?php echo $rollno ?></td>
-                            <td>
-                                <center>
-                                    <a href="studentdetails1.php?id=<?php echo $rollno; ?>" class="px-4 bg-yellow-500 hover:bg-black hover:text-white py-2 rounded-md ">Details<a>                                             
-                                </center>
-                            </td>
-                        
-                        </tr>
-                        <?php } } ?>
-                    </tbody>
-              </table>
+                      echo "<b><u>Name:</u></b> ".$name."<br><br>";
+                      echo "<b><u>Category:</u></b> ".$category."<br><br>";
+                      echo "<b><u>Roll No:</u></b> ".$rno."<br><br>";
+                      echo "<b><u>Email Id:</u></b> ".$email."<br><br>";
+                      echo "<b><u>Mobile No:</u></b> ".$mobno."<br><br>"; 
+                ?>
+            </div>    
           </div>
 
         </div>
