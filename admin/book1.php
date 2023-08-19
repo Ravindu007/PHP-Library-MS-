@@ -86,7 +86,7 @@ if ($_SESSION['RollNo']) {
                                   <td><b><?php echo $avail ?></b></td>
                                     <td><center>
                                         <a href="bookdetails1.php?id=<?php echo $bookid; ?>" class="px-4 py-2 bg-yellow-500 hover:bg-black hover:text-white border-1 rounded-md">Details</a>
-                                        <a href="edit_book_details.php?id=<?php echo $bookid; ?>" class="px-4 py-2 bg-black text-white hover:bg-yellow-500 hover:text-black  border-1 rounded-md">Edit</a>
+                                        <a href="edit_book_details1.php?id=<?php echo $bookid; ?>" class="px-4 py-2 bg-black text-white hover:bg-yellow-500 hover:text-black  border-1 rounded-md">Edit</a>
                                     </center></td>
                                 </tr>
                             <?php }
@@ -174,15 +174,16 @@ if($conn->query($sql1) === TRUE){
     $x=$row['x'];
     $sql3="insert into LMS.author values ('$x','$author1')";
     $result=$conn->query($sql3);
-    if(!empty($author2))
-    { $sql4="insert into LMS.author values('$x','$author2')";
-      $result=$conn->query($sql4);}
-    if(!empty($author3))
-    { $sql5="insert into LMS.author values('$x','$author3')";
-      $result=$conn->query($sql5);}
-    echo "<script type='text/javascript'>alert('Success')</script>";
+    if(!empty($author2)){ 
+      $sql4="insert into LMS.author values('$x','$author2')";
+      $result=$conn->query($sql4);
     }
-    else    
+    if(!empty($author3)){
+       $sql5="insert into LMS.author values('$x','$author3')";
+       $result=$conn->query($sql5);}
+        echo "<script type='text/javascript'>alert('Success')</script>";
+        echo "<script>window.location.href = 'book1.php';</script>";
+    }else    
     {//echo $conn->error;
     echo "<script type='text/javascript'>alert('Error')</script>";
     }
