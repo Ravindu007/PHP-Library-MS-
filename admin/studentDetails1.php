@@ -41,9 +41,9 @@ if ($_SESSION['RollNo']) {
 
           <!-- Content part of the Student -->
           <div class="col-sm-12 col-md-8 content h-screen overflow-y-scroll flex justify-center items-center">
-            <button class="bg-yellow-500 rounded-md px-4 py-2 mr-5 hover:bg-black hover:text-white">
-              <a href="student1.php">Back</a>
-            </button>
+            <a href="student1.php" class="bg-yellow-500 rounded-md px-4 py-2 mr-5 hover:bg-black hover:text-white border-none">
+              Back
+            </a>
             <div class="profile w-[50%] h-fit px-4 py-4 border-1 border-yellow-300 shadow-md shadow-yellow-500">
                 <?php
                 $rno=$_GET['id'];
