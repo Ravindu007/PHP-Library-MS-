@@ -29,7 +29,7 @@ if ($_SESSION['RollNo']) {
                 <a href="book1.php" class="text-2xl hover:translate-x-10 duration-200 hover:bg-black hover:text-white hover:border-1 hover:rounded-3xl hover:px-4 hover:no-underline bg-yellow-300 px-5 py-2 rounded-r-2xl">Manage Books</a>
               </li>
               <li class="w-[90%] flex justify-start">
-                <a href="" class="text-2xl hover:translate-x-10 duration-200 hover:bg-black hover:text-white hover:border-1 hover:rounded-3xl hover:px-4 hover:no-underline bg-yellow-300 px-5 py-2 rounded-r-2xl">Issue / Return Requests </a>
+                <a href="requests1.php" class="text-2xl hover:translate-x-10 duration-200 hover:bg-black hover:text-white hover:border-1 hover:rounded-3xl hover:px-4 hover:no-underline bg-yellow-300 px-5 py-2 rounded-r-2xl">Issue / Return Requests </a>
               </li>
               <li class="w-[90%] flex justify-start">
                 <a href="" class="text-2xl hover:translate-x-10 duration-200 hover:bg-black hover:text-white hover:border-1 hover:rounded-3xl hover:px-4 hover:no-underline bg-yellow-300 px-5 py-2 rounded-r-2xl">Currently Issued Books</a>
@@ -41,7 +41,7 @@ if ($_SESSION['RollNo']) {
 
           <!-- Content part of the Student -->
           <div class="col-sm-12 col-md-8 content h-screen overflow-y-scroll">
-            <h1 class="flex w-full justify-start text-3xl py-2">Manage Students</h1>
+            <h1 class="flex w-full justify-start text-3xl py-2">Student Management</h1>
             <table class="w-full border-2 border-black">
             <?php
                 if (isset($_POST['submit'])) {

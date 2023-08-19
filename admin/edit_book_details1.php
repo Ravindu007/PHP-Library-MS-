@@ -63,7 +63,7 @@ if ($_SESSION['RollNo']) {
                                 ?>
 
                                     <br >
-                                    <form class="form-horizontal row-fluid" action="edit_book_details.php?id=<?php echo $bookid ?>" method="post">
+                                    <form class="form-horizontal row-fluid" action="edit_book_details1.php?id=<?php echo $bookid ?>" method="post">
                                         <div class="form-group">
                                             <b>
                                             <label class="control-label" for="Title">Book Title:</label></b>
@@ -90,7 +90,8 @@ if ($_SESSION['RollNo']) {
                                         </div>
 
                                         <div class="form-group">
-                                                <button type="submit" name="submit"class="px-4 py-2 border-2 border-round-md border-yellow-500 hover:bg-yellow-500 hover:text-white">Update Details</button>
+                                                <a type="submit" name="submit"class="px-4 py-2 border-2 rounded-md border-yellow-500 hover:bg-yellow-500 hover:text-white">Update Details</a>
+                                                <a href="book1.php" class="px-4 py-2 border-2 rounded-md border-gray-500 hover:bg-gray-500 hover:text-white">Cancel</a>
                                         </div>
 
                                     </form> 
