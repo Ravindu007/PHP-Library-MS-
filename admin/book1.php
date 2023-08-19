@@ -85,8 +85,8 @@ if ($_SESSION['RollNo']) {
                                   <td><?php echo $name ?></td>
                                   <td><b><?php echo $avail ?></b></td>
                                     <td><center>
-                                        <a href="bookdetails.php?id=<?php echo $bookid; ?>" class="btn btn-primary">Details</a>
-                                        <a href="edit_book_details.php?id=<?php echo $bookid; ?>" class="btn btn-success">Edit</a>
+                                        <a href="bookdetails1.php?id=<?php echo $bookid; ?>" class="px-4 py-2 bg-yellow-500 hover:bg-black hover:text-white border-1 rounded-md">Details</a>
+                                        <a href="edit_book_details.php?id=<?php echo $bookid; ?>" class="px-4 py-2 bg-black text-white hover:bg-yellow-500 hover:text-black  border-1 rounded-md">Edit</a>
                                     </center></td>
                                 </tr>
                             <?php }
@@ -153,6 +153,7 @@ if ($_SESSION['RollNo']) {
           
         </div>
       </div>
+      
 
 
 <?php
